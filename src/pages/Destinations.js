@@ -142,25 +142,28 @@ const Destinations = () => {
                 </Grid>
               ))}
             </Grid>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "40px",
-              }}
-            >
-              <Stack spacing={2}>
-                <Pagination
-                  count={totalPages}
-                  onChange={(e, page) => {
-                    navigate("/destinations?page=" + page);
-                  }}
-                  // selected={currentPage}
-                  page={currentPage}
-                />
-              </Stack>
-            </Box>
+
+            {totalPages > 1 && (
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "40px",
+                }}
+              >
+                <Stack spacing={2}>
+                  <Pagination
+                    count={totalPages}
+                    onChange={(e, page) => {
+                      navigate("/destinations?page=" + page);
+                    }}
+                    // selected={currentPage}
+                    page={currentPage}
+                  />
+                </Stack>
+              </Box>
+            )}
           </Box>
         </Box>
       )}

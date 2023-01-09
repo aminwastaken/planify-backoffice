@@ -30,7 +30,18 @@ const HorizontalCard = ({
         <CardContent
           sx={{ margin: 0, padding: 0, display: "flex", width: "300px" }}
         >
-          <CardMedia component="img" height="170" image={image} />
+          <CardMedia
+            component="img"
+            // height="170"
+            // width="170"
+            image={image}
+            sx={{
+              height: "170px",
+              minWidth: "197px",
+              //fit content to the size of the card
+              bjectFit: "cover",
+            }}
+          />
 
           <Box
             sx={{
